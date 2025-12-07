@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tang Frères Delivery – Checkout A/B Test</title>
+
+  <!-- Fonts (same as other pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-checkout">
+
+
+    <div class="tf-gradient-bg">
+        <div class="tf-hero-wrapper">
+            <main class="tf-page tf-page-checkout">
+
+  <!-- SITE HEADER (same across pages) -->
+  <header class="tf-header">
+    <div class="tf-header-inner">
+      <div class="tf-brand">
+        <img src="tang freres.png" alt="Tang Frères logo" class="tf-logo">
+        <div>
+          <div class="tf-brand-name">Tang Frères Delivery</div>
+          <div class="tf-brand-tagline">Asian groceries, delivered tonight</div>
+        </div>
+      </div>
+  
+      <nav class="tf-nav">
+        <a class="tf-nav-link" href="index3.html">Home</a>
+        <a class="tf-nav-link tf-nav-link--current" href="checkout.html">Basket</a>
+        <a class="tf-nav-link" href="delivery.html">Delivery &amp; Loyalty</a>
+        <a class="tf-nav-link" href="experiments.html">Experiments</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- JOURNEY STAGE BAR -->
+  <div class="journey-stage-bar">
+    <div class="journey-stage-inner">
+      <div class="journey-title">Customer journey</div>
+      <div class="stage-pill-row">
+        <a href="index.html#stage-awareness" class="stage-pill">Awareness</a>
+        <a href="index.html#stage-consideration" class="stage-pill">Consideration</a>
+        <a href="checkout.html" class="stage-pill is-current">Decision &amp; purchase</a>
+        <a href="delivery.html#stage-delivery" class="stage-pill">Delivery &amp; loyalty</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIMENT SUMMARY (TOP) -->
+  <main class="tf-page tf-page-experiments">
+    <section class="experiments-section">
+      <div class="stage-group" data-stage="checkout">
+        <div class="stage-group-title">Stage 3 · Decision &amp; purchase</div>
+        <div class="stage-group-subtitle">
+          How checkout structure and account requirements affect completion and first-time conversion.
+        </div>
+
+        <div class="experiment-grid">
+
+          <!-- Checkout flow steps experiment -->
+          <article class="experiment-card" data-version="A" data-target="hero-a">
+            <div class="experiment-label">CHECKOUT FLOW</div>
+            <h3 class="exp-title">Four-step checkout vs. streamlined three-step flow</h3>
+            <p class="exp-variants">
+              <strong>A:</strong> Cart → Log in → Address → Payment (account required before address).<br />
+              <strong>B:</strong> Cart &amp; slot → Details → Payment (account optional).
+            </p>
+            <div class="exp-kpis">
+              <span class="kpi-pill kpi-pill-positive">Checkout completion +18%</span>
+              <span class="kpi-pill kpi-pill-positive">Time to complete –25%</span>
+            </div>
+          </article>
+
+          <!-- Guest checkout experiment -->
+          <article class="experiment-card" data-version="B" data-target="guest-section">
+            <div class="experiment-label">ACCOUNT REQUIREMENT</div>
+            <h3 class="exp-title">Account required vs. guest checkout option</h3>
+            <p class="exp-variants">
+              <strong>A:</strong> All users must create an account or log in before paying.<br />
+              <strong>B:</strong> Guest checkout is available; account creation is offered after purchase.
+            </p>
+            <div class="exp-kpis">
+              <span class="kpi-pill kpi-pill-positive">First-purchase conversion +22%</span>
+              <span class="kpi-pill kpi-pill-neutral">Account creation –3% (shifted to post-purchase)</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- VERSION SWITCH -->
+  <div class="version-switch">
+    <div class="version-switch-inner">
+      <div class="version-buttons">
+        <button class="version-btn is-active" data-version-btn="A">Version A (baseline)</button>
+        <button class="version-btn" data-version-btn="B">Version B (improved)</button>
+      </div>
+      <div class="version-label">
+        Currently viewing: <span id="current-version-label">Version A (baseline)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT PROTOTYPE (A / B) -->
+
+    
+
+      <!-- ================== VERSION A ================== -->
+      <section class="version-panel is-visible" data-version="A">
+
+        <!-- HERO / FLOW DESCRIPTION -->
+        <section class="hero hero-a" id="hero-a">
+          <div class="hero-content">
+            <p class="eyebrow">3. Decision · Checkout – Version A</p>
+            <h1>Multi-step checkout with account required</h1>
+            <p class="hero-text">
+              In Version A, customers complete a four-step checkout and must log in or create an account
+              before entering delivery details.
+            </p>
+          </div>
+        </section>
+
+        <!-- FLOW STEPS – VERSION A -->
+        <section class="tf-section">
+          <header class="tf-section-header">
+            <p class="section-step">Checkout flow · Version A</p>
+            <h2>Four steps to complete the order</h2>
+            <p>
+              The baseline flow separates authentication from delivery details, which can increase friction for
+              first-time users.
+            </p>
+          </header>
+
+          <div class="flow-steps flow-steps-a">
+            <div class="flow-step">
+              <div class="flow-number">1</div>
+              <div class="flow-body">
+                <h3>Cart</h3>
+                <p>Review products and quantities.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-number">2</div>
+              <div class="flow-body">
+                <h3>Log in</h3>
+                <p>Account is required before delivery details.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-number">3</div>
+              <div class="flow-body">
+                <h3>Address</h3>
+                <p>Enter address and contact information.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-number">4</div>
+              <div class="flow-body">
+                <h3>Payment</h3>
+                <p>Pay securely by card.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="checkout-note">
+            Customers must <strong>log in or create an account</strong> to complete the order in Version A.
+          </p>
+        </section>
+
+      </section>
+
+      <!-- ================== VERSION B ================== -->
+      <section class="version-panel" data-version="B">
+
+        <!-- HERO / FLOW DESCRIPTION -->
+        <section class="hero hero-b">
+          <div class="hero-content">
+            <p class="eyebrow">3. Decision · Checkout – Version B</p>
+            <h1>Streamlined checkout with guest option</h1>
+            <p class="hero-text">
+              Version B combines steps and adds a guest checkout option to reduce friction, especially for
+              first-time customers arriving from campaigns.
+            </p>
+          </div>
+        </section>
+
+        <!-- FLOW STEPS – VERSION B -->
+        <section class="tf-section">
+          <header class="tf-section-header">
+            <p class="section-step">Checkout flow · Version B</p>
+            <h2>Three clear steps</h2>
+            <p>
+              The optimised flow groups related actions together, while keeping a clear sense of progress from
+              basket to confirmation.
+            </p>
+          </header>
+
+          <div class="flow-steps flow-steps-b">
+            <div class="flow-step">
+              <div class="flow-number">1</div>
+              <div class="flow-body">
+                <h3>Cart &amp; slot</h3>
+                <p>Confirm basket and choose delivery window.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-number">2</div>
+              <div class="flow-body">
+                <h3>Details</h3>
+                <p>Enter address and contact information.</p>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-number">3</div>
+              <div class="flow-body">
+                <h3>Payment</h3>
+                <p>Pay and receive real-time order updates.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GUEST VS ACCOUNT SECTION -->
+        <section class="tf-section" id="guest-section">
+          <header class="tf-section-header">
+            <p class="section-step">Account requirement · Version B</p>
+            <h2>Guest checkout and account benefits</h2>
+            <p>
+              The experiment compares a strict account requirement with a guest path where registration is
+              proposed after payment.
+            </p>
+          </header>
+
+          <div class="checkout-options">
+            <div class="checkout-card">
+              <h3>Guest checkout</h3>
+              <p>Complete the purchase without creating an account; only email and delivery details are required.</p>
+              <button class="btn btn-primary btn-small">Continue as guest</button>
+            </div>
+            <div class="checkout-card">
+              <h3>Log in or create account</h3>
+              <p>Save addresses, favourite products and order history for future purchases.</p>
+              <button class="btn btn-secondary btn-small">Log in / Sign up</button>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="tf-footer">
+    <div class="tf-footer-inner">
+      <span class="tf-footer-brand">Tang Frères Delivery</span>
+      <span class="tf-footer-text">
+        A/B testing prototype 
+      </span>
+    </div>
+  </footer>
+  
+
+  <script src="script.js"></script>
+
+</body>
+</div> <!-- closes tf-gradient-bg -->
+</html>

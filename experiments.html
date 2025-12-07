@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tang Frères – Customer Journey Experiments</title>
+
+  <!-- Inter font (same as other pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page-experiments">
+
+  <!-- SITE HEADER (same structure as on index / delivery) -->
+  <header class="tf-header">
+    <div class="tf-header-inner">
+      <div class="tf-brand">
+        <img src="tang freres.png" alt="Tang Frères logo" class="tf-logo">
+        <div>
+          <div class="tf-brand-name">Tang Frères Delivery</div>
+          <div class="tf-brand-tagline">Asian groceries, delivered tonight</div>
+        </div>
+      </div>
+
+      <nav class="tf-nav">
+        <a class="tf-nav-link" href="index3.html">Home</a>
+        <a class="tf-nav-link" href="checkout.html">Basket</a>
+        <a class="tf-nav-link" href="delivery.html">Delivery & Loyalty</a>
+        <a class="tf-nav-link tf-nav-link--current" href="experiments.html">Experiments</a>
+
+      </nav>
+    </div>
+  </header>
+  
+
+  <!-- STAGE NAV BAR -->
+  <div class="journey-stage-bar">
+    <div class="journey-stage-inner">
+      <div class="journey-title">Customer journey</div>
+      <div class="stage-pill-row">
+        <a href="#stage-awareness"      class="stage-pill">Awareness</a>
+        <a href="#stage-consideration"  class="stage-pill">Consideration</a>
+        <a href="#stage-checkout"       class="stage-pill">Decision &amp; purchase</a>
+        <a href="#stage-delivery"       class="stage-pill">Delivery &amp; use</a>
+        <a href="#stage-loyalty"        class="stage-pill">Loyalty &amp; advocacy</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="tf-page tf-page-experiments">
+
+    <!-- INTRO -->
+    <section class="tf-section">
+      <header class="tf-section-header">
+        <p class="section-step">Overview</p>
+        <h1 style="font-size:1.6rem; margin-top:0.3rem;">A/B tests across the Tang Frères journey</h1>
+        <p class="overview-description">
+            This page shows all the experiments we conducted for the A/B testing.
+        </p>
+      </header>
+    </section>
+
+    <!-- ====================== AWARENESS ====================== -->
+    <!-- =========================
+     STAGE 1 · AWARENESS
+========================= -->
+<div class="stage-group" data-stage="awareness" id="stage-awareness">
+    <div class="stage-group-title">Stage 1 · Awareness</div>
+    <h2 class="stage-heading">
+        How people discover Tang Frères Delivery and understand the value quickly.
+      </h2>
+  
+    <div class="experiment-grid">
+  
+      <!-- Awareness Experiment 1 – Homepage hero -->
+      <article class="experiment-card" data-version="B" data-target="#hero-b">
+        <div class="exp-meta">Awareness · Homepage hero</div>
+        <h3 class="exp-title">
+          Landing page: generic vs. “Plan your stir-fry in 3 clicks”
+        </h3>
+        <p class="exp-copy">
+          Compare a generic hero (Version A) with an intent-based hero including search and quick recipes (Version B).
+        </p>
+  
+        <div class="exp-variants">
+          <p><strong>A:</strong> “Asian groceries delivered to your door” + one CTA.</p>
+          <p><strong>B:</strong> “Plan your stir-fry in 3 clicks” + search bar + recipe shortcuts.</p>
+        </div>
+  
+        <div class="exp-kpis">
+          <span class="kpi-pill kpi-pill-positive">Bounce rate −15%</span>
+          <span class="kpi-pill kpi-pill-positive">Hero CTA click-through +20%</span>
+        </div>
+  
+        <p class="experiment-note">
+          Variant B focuses on a specific use case (tonight’s dinner), which typically improves clarity and engagement.
+        </p>
+      </article>
+  
+      <!-- Awareness Experiment 2 – Social creative format -->
+      <article class="experiment-card" data-version="B">
+        <div class="exp-meta">Awareness · Social ads</div>
+        <h3 class="exp-title">
+          Social creative: static image vs. 15-second recipe video
+        </h3>
+        <p class="exp-copy">
+          We test how ad format influences traffic quality from paid social campaigns driving to the homepage.
+        </p>
+  
+        <div class="exp-variants">
+          <p>
+            <strong>A:</strong> Static image carousel featuring 3 Tang Frères products with price and logo.
+          </p>
+          <p>
+            <strong>B:</strong> 15-second recipe video showing the “Weeknight Stir-Fry” bundle being prepared.
+          </p>
+        </div>
+  
+        <div class="exp-kpis">
+          <span class="kpi-pill kpi-pill-positive">Click-through rate +22%</span>
+          <span class="kpi-pill kpi-pill-positive">Landing-page sessions +18%</span>
+        </div>
+  
+        <p class="experiment-note">
+          Variant B (video) usually drives more engaged traffic that stays longer and is more likely to explore recipes.
+        </p>
+      </article>
+  
+    </div><!-- /.experiment-grid -->
+  </div><!-- /.stage-group -->
+  
+
+    <!-- ====================== CONSIDERATION ====================== -->
+    <section id="stage-consideration" class="experiment-stage">
+      <header class="experiment-stage-header">
+        <span class="stage-label">Stage 2 · Consideration</span>
+        <h2>Help users explore the catalogue</h2>
+        <p>These tests optimise how quickly shoppers discover relevant products and build a basket.</p>
+      </header>
+
+      <div class="experiment-strip">
+        <!-- Filters prominence -->
+        <a href="index.html#filters" class="experiment-card">
+          <div class="experiment-tag">Search &amp; filters</div>
+          <h3>Filter prominence for pantry items</h3>
+          <p class="experiment-desc">
+            A: Basic product list, minimal filters.<br>
+            B: Always-visible filters (noodles, frozen, sauces, vegan, spicy).
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">Product views per session +22%</span>
+            <span class="kpi-pill kpi-positive">Add-to-cart rate +12%</span>
+          </div>
+        </a>
+
+        <!-- Recipe → bundle -->
+        <a href="index.html#bundle" class="experiment-card">
+          <div class="experiment-tag">Recipe bundle</div>
+          <h3>Recipe page vs. one-click “Weeknight Stir-Fry” bundle</h3>
+          <p class="experiment-desc">
+            A: Users add ingredients one by one from the list.<br>
+            B: One CTA adds the full stir-fry bundle to the cart.
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">Average basket size +18%</span>
+            <span class="kpi-pill kpi-positive">Time to complete basket −25%</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================== CHECKOUT ====================== -->
+    <section id="stage-checkout" class="experiment-stage">
+      <header class="experiment-stage-header">
+        <span class="stage-label">Stage 3 · Decision &amp; purchase</span>
+        <h2>Reduce friction at checkout</h2>
+        <p>We compare a classic multi-step flow with mandatory login against a simpler guest-friendly flow.</p>
+      </header>
+
+      <div class="experiment-strip">
+        <!-- Flow complexity -->
+        <a href="checkout.html#flow" class="experiment-card">
+          <div class="experiment-tag">Checkout flow</div>
+          <h3>Four-step account flow vs. three-step simplified flow</h3>
+          <p class="experiment-desc">
+            A: Cart → Login → Address → Payment (account required).<br>
+            B: Cart → Details → Payment (login optional).
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">Checkout completion rate +12%</span>
+            <span class="kpi-pill kpi-neutral">Average checkout time −10%</span>
+          </div>
+        </a>
+
+        <!-- Guest checkout -->
+        <a href="checkout.html#guest" class="experiment-card">
+          <div class="experiment-tag">Guest checkout</div>
+          <h3>Account required vs. “Continue as guest”</h3>
+          <p class="experiment-desc">
+            A: New customers must create an account before paying.<br>
+            B: Guest checkout available, account creation offered after purchase.
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">New customer orders +19%</span>
+            <span class="kpi-pill kpi-positive">Checkout abandonment −14%</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================== DELIVERY & USE ====================== -->
+    <section id="stage-delivery" class="experiment-stage">
+      <header class="experiment-stage-header">
+        <span class="stage-label">Stage 4 · Delivery &amp; use</span>
+        <h2>Manage expectations after the order</h2>
+        <p>Tests here focus on perceived reliability and how we handle out-of-stock items.</p>
+      </header>
+
+      <div class="experiment-strip">
+        <!-- ETA specificity -->
+        <a href="delivery.html#eta" class="experiment-card">
+          <div class="experiment-tag">Delivery ETA</div>
+          <h3>Broad 30–90 min window vs. 1-hour slot with precise ETA</h3>
+          <p class="experiment-desc">
+            A: Single message “delivery in 30–90 minutes”.<br>
+            B: Customer chooses a 1-hour slot and sees a live ETA (e.g. 18:40–18:55).
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">On-time perception +18%</span>
+            <span class="kpi-pill kpi-positive">Support tickets about delivery −12%</span>
+          </div>
+        </a>
+
+        <!-- Substitution workflow -->
+        <a href="delivery.html#subs" class="experiment-card">
+          <div class="experiment-tag">Substitution rules</div>
+          <h3>Store-decided substitutions vs. customer-controlled rules</h3>
+          <p class="experiment-desc">
+            A: Store chooses substitutes, customer only sees refund.<br>
+            B: Customer chooses: allow similar, SMS confirmation, or no substitutions.
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">Order satisfaction +22%</span>
+            <span class="kpi-pill kpi-positive">Refund rate −9%</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ====================== LOYALTY & ADVOCACY ====================== -->
+    <section id="stage-loyalty" class="experiment-stage">
+      <header class="experiment-stage-header">
+        <span class="stage-label">Stage 5 · Loyalty &amp; advocacy</span>
+        <h2>Encourage repeat orders and community content</h2>
+        <p>Finally, we test alternative loyalty models and incentives for reviews and recipes.</p>
+      </header>
+
+      <div class="experiment-strip">
+        <!-- Points vs tiers -->
+        <a href="delivery.html#loyalty" class="experiment-card">
+          <div class="experiment-tag">Loyalty design</div>
+          <h3>Flat points programme vs. Silver / Gold / VIP tiers</h3>
+          <p class="experiment-desc">
+            A: 1 point per €1, €5 coupon at 100 points, same for everyone.<br>
+            B: Tiered benefits (Silver, Gold, VIP) with free delivery and early access.
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">Repeat orders per month +15%</span>
+            <span class="kpi-pill kpi-neutral">Average order value +6%</span>
+          </div>
+        </a>
+
+        <!-- UGC incentives -->
+        <a href="delivery.html#ugc" class="experiment-card">
+          <div class="experiment-tag">UGC incentives</div>
+          <h3>Standard orders vs. extra points for reviews &amp; recipes</h3>
+          <p class="experiment-desc">
+            A: No reward for reviews or photos.<br>
+            B: Bonus points for sharing recipes, ratings and photos of meals.
+          </p>
+          <div class="kpi-row">
+            <span class="kpi-pill kpi-positive">UGC submissions +40%</span>
+            <span class="kpi-pill kpi-positive">Organic traffic from SEO +9%</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="tf-footer">
+    <div class="tf-footer-inner">
+      <span class="tf-footer-brand">Tang Frères Delivery</span>
+      <span class="tf-footer-text">
+        A/B testing prototype 
+      </span>
+    </div>
+  </footer>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

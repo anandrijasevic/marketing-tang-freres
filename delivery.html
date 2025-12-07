@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tang Frères Delivery – Delivery & Loyalty</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-delivery">
+
+
+    <div class="tf-gradient-bg">
+        <div class="tf-hero-wrapper">
+            <main class="tf-page tf-page-delivery">
+
+
+  <!-- HEADER -->
+  <header class="tf-header">
+    <div class="tf-header-inner">
+      <div class="tf-brand">
+        <img src="tang freres.png" alt="Tang Frères logo" class="tf-logo">
+        <div>
+          <div class="tf-brand-name">Tang Frères Delivery</div>
+          <div class="tf-brand-tagline">Asian groceries, delivered tonight</div>
+        </div>
+      </div>
+
+      <nav class="tf-nav">
+        <a class="tf-nav-link" href="index3.html">Home</a>
+        <a class="tf-nav-link" href="checkout.html">Basket</a>
+        <a class="tf-nav-link tf-nav-link--current" href="delivery.html">Delivery &amp; Loyalty</a>
+
+        <a class="tf-nav-link" href="experiments.html">Experiments</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- JOURNEY STAGE BAR -->
+  <div class="journey-stage-bar">
+    <div class="journey-stage-inner">
+      <div class="journey-title">Customer journey</div>
+      <div class="stage-pill-row">
+        <a href="experiments.html#stage-awareness" class="stage-pill">Awareness</a>
+        <a href="experiments.html#stage-consideration" class="stage-pill">Consideration</a>
+        <a href="checkout.html#stage-checkout" class="stage-pill">Decision &amp; purchase</a>
+        <a href="#stage-delivery" class="stage-pill is-active">Delivery &amp; use</a>
+        <a href="#stage-loyalty" class="stage-pill">Loyalty &amp; advocacy</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="tf-page tf-page-experiments">
+
+    <!-- OVERVIEW + TOP EXPERIMENT CARDS -->
+    <section class="experiments-section" aria-labelledby="delivery-overview-title">
+      <header class="experiments-header">
+        <div class="experiments-label">Overview</div>
+        <h1 id="delivery-overview-title">Delivery &amp; Loyalty experiments</h1>
+        <p>
+          This page compares a basic experience (Version A) with an optimized one (Version B)
+          focused on delivery time slots, substitution choices and loyalty rewards.
+        </p>
+      </header>
+
+      <main id="experiments" class="experiments-section-inner">
+        <div class="stage-group" data-stage="delivery">
+          <div class="stage-group-title">Stage 4 · Delivery &amp; use</div>
+          <div class="stage-group-subtitle">
+            How customers receive their order and manage substitutions.
+          </div>
+
+          <div class="experiment-grid">
+            <!-- Card 1: ETA & time slots -->
+            <article class="experiment-card" data-version="B" data-target="#section-eta">
+              <div class="experiment-label">Delivery · ETA &amp; time slots</div>
+              <h3 class="exp-title">Broad 30–90 min window vs. 1-hour slot with precise ETA</h3>
+              <p>
+                A/B test between a vague “30–90 minutes” promise and a selected 1-hour slot that shows
+                a live ETA (e.g. 18:40–18:55) on the confirmation screen.
+              </p>
+              <div class="exp-variants">
+                <p><strong>A:</strong> Broad 30–90 min window, no slot choice.</p>
+                <p><strong>B:</strong> User selects 1-hour slot with precise ETA.</p>
+              </div>
+              <div class="exp-kpis">
+                <span class="kpi-pill kpi-pill-positive">On-time perception +18%</span>
+                <span class="kpi-pill kpi-pill-positive">Support tickets –12%</span>
+              </div>
+            </article>
+
+            <!-- Card 2: Substitution workflow -->
+            <article class="experiment-card" data-version="B" data-target="#section-subs">
+              <div class="experiment-label">Delivery · Substitution workflow</div>
+              <h3 class="exp-title">Store decides substitutions vs. customer-controlled rules</h3>
+              <p>
+                Test whether giving customers substitution choices improves satisfaction and
+                reduces refund volume.
+              </p>
+              <div class="exp-variants">
+                <p><strong>A:</strong> Store chooses substitutions, customer is only refunded.</p>
+                <p><strong>B:</strong> Customer sets rules (allow / SMS / no substitution) and confirms an example swap.</p>
+              </div>
+              <div class="exp-kpis">
+                <span class="kpi-pill kpi-pill-positive">Order satisfaction +22%</span>
+                <span class="kpi-pill kpi-pill-positive">Refund rate –9%</span>
+              </div>
+            </article>
+
+            <!-- Card 3: Loyalty programme -->
+            <article class="experiment-card" data-version="B" data-target="#section-loyalty">
+              <div class="experiment-label">Loyalty · Programme design</div>
+              <h3 class="exp-title">Flat points system vs. tiered loyalty + UGC rewards</h3>
+              <p>
+                Comparison of a simple points scheme with a tiered programme that rewards
+                reviews and shared recipes.
+              </p>
+              <div class="exp-variants">
+                <p><strong>A:</strong> Flat points (1 point / €1, coupon at 100 points).</p>
+                <p><strong>B:</strong> Tiers (Silver / Gold / VIP) + bonus points for reviews and recipes.</p>
+              </div>
+              <div class="exp-kpis">
+                <span class="kpi-pill kpi-pill-positive">Repeat orders +15%</span>
+                <span class="kpi-pill kpi-pill-positive">UGC submissions +40%</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <!-- VERSION SWITCH (A / B) -->
+    <div class="version-switch">
+      <div class="version-switch-inner">
+        <div class="version-buttons">
+          <button class="version-btn is-active" data-version-btn="A">Version A (baseline)</button>
+          <button class="version-btn" data-version-btn="B">Version B (improved)</button>
+        </div>
+        <div class="version-label">
+          Currently viewing: <span id="current-version-label">Version A (baseline)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== VERSION A PANEL ===================== -->
+    <section class="version-panel is-visible" data-version="A" id="stage-delivery">
+      <!-- DELIVERY A -->
+      <section class="tf-section">
+        <header class="tf-section-header">
+          <p class="section-step">Stage 4 · Delivery &amp; use · Version A</p>
+          <h2>Delivery window and substitutions (baseline)</h2>
+          <p>
+            Version A offers a broad ETA and no control over substitutions. Missing items are
+            refunded automatically.
+          </p>
+        </header>
+
+        <div class="delivery-card delivery-card-a">
+          <p><strong>Estimated delivery:</strong> arriving in <strong>30–90 minutes</strong>.</p>
+          <p>
+            If an item is out of stock, the store refunds the difference and chooses any similar
+            product.
+          </p>
+          <ul>
+            <li>No choice of delivery slot</li>
+            <li>No substitution preferences</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- LOYALTY A -->
+      <section class="tf-section" id="stage-loyalty">
+        <header class="tf-section-header">
+          <p class="section-step">Stage 5 · Loyalty · Version A</p>
+          <h2>Simple points system</h2>
+          <p>
+            A single-layer loyalty scheme where every euro spent generates the same number of points.
+          </p>
+        </header>
+
+        <div class="loyalty-grid">
+          <div class="loyalty-card loyalty-card-a">
+            <h3>How it works</h3>
+            <p>Earn <strong>1 point for every €1 spent</strong>.</p>
+            <p>Every 100 points = <strong>€5 coupon</strong> on the next order.</p>
+            <p>All customers are in the same group with no tiers or exclusive benefits.</p>
+          </div>
+          <div class="loyalty-card loyalty-card-email">
+            <h3>Example notification</h3>
+            <p><em>“Thank you for your order. You have earned 42 points.”</em></p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== VERSION B PANEL ===================== -->
+    <section class="version-panel" data-version="B">
+      <!-- DELIVERY B -->
+      <section class="tf-section">
+        <header class="tf-section-header">
+          <p class="section-step">Stage 4 · Delivery &amp; use · Version B</p>
+          <h2>Precise delivery time &amp; substitution choices</h2>
+          <p>
+            Version B introduces 1-hour delivery windows, a visible ETA and customer-defined
+            substitution rules.
+          </p>
+        </header>
+
+        <div class="delivery-grid">
+          <!-- ETA -->
+          <div id="section-eta" class="delivery-card">
+            <h3>Choose your delivery window</h3>
+            <label class="delivery-slot-label" for="slot-select">Delivery slot</label>
+            <select id="slot-select" class="select">
+              <option>18:00–19:00</option>
+              <option>19:00–20:00</option>
+              <option>20:00–21:00</option>
+            </select>
+            <p class="delivery-hint">
+              Slots are updated in real time based on rider capacity.
+            </p>
+            <p class="delivery-eta">
+              Today’s estimate for this slot: <strong>18:40–18:55</strong>.
+            </p>
+          </div>
+
+          <!-- Substitutions -->
+          <div id="section-subs" class="delivery-card">
+            <h3>Substitution preferences</h3>
+            <label class="radio-row">
+              <input type="radio" name="subs" checked />
+              <span>Allow similar substitutions (default).</span>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="subs" />
+              <span>Ask by SMS before substituting.</span>
+            </label>
+            <label class="radio-row">
+              <input type="radio" name="subs" />
+              <span>No substitutions – refund missing items.</span>
+            </label>
+
+            <div class="delivery-example">
+              <p><strong>Example:</strong> Pak Choi (500g) is unavailable.</p>
+              <p>Suggested substitute: <strong>Bok Choi (450g)</strong>.</p>
+              <div class="delivery-example-actions">
+                <button class="btn btn-primary btn-small">Accept substitute</button>
+                <button class="btn btn-secondary btn-small">Keep original only</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOYALTY B -->
+      <section class="tf-section" id="section-loyalty">
+        <header class="tf-section-header">
+          <p class="section-step">Stage 5 · Loyalty · Version B</p>
+          <h2>Tiered rewards &amp; community</h2>
+          <p>
+            A richer loyalty programme with status tiers and rewards for contributions such as
+            reviews and recipes.
+          </p>
+        </header>
+
+        <div class="loyalty-grid">
+          <div class="loyalty-card loyalty-card-b">
+            <h3>Loyalty tiers</h3>
+            <ul class="tiers-list">
+              <li><strong>Silver</strong> · 3 orders / month → Free delivery once a month</li>
+              <li><strong>Gold</strong> · 6 orders / month → Free delivery + early access to specials</li>
+              <li><strong>VIP</strong> · Invite only → Event invitations and exclusive bundles</li>
+            </ul>
+          </div>
+          <div class="loyalty-card loyalty-card-ugc">
+            <h3>Community recipes &amp; reviews</h3>
+            <p>
+              Customers earn extra points by sharing recipes, photos and short reviews of their
+              Tang Frères meals.
+            </p>
+            <p class="ugc-example">
+              <em>“Loved the stir-fry bundle – everything arrived fresh and on time.”</em>
+            </p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SHARED VISUAL (APPLIES TO BOTH VERSIONS) -->
+    <section class="tf-section">
+      <header class="tf-section-header">
+        <p class="section-step">Basket example</p>
+        <h2>Typical Tang Frères delivery basket</h2>
+        <p>
+          Illustration of the kind of order used in the delivery and loyalty experiments.
+        </p>
+      </header>
+
+      <div class="delivery-items-card">
+        <img
+          class="delivery-items-image"
+          src="stirfry.jpeg"
+          alt="Grocery basket with fresh vegetables and Asian ingredients"
+        />
+        <div class="delivery-items-info">
+          <h3>Example order contents</h3>
+          <ul>
+            <li>Pak Choi (500g)</li>
+            <li>Rice noodles (400g)</li>
+            <li>Stir-fry sauce (bottle)</li>
+            <li>Frozen dumplings (24 pcs)</li>
+          </ul>
+          <p>
+            This is the same “Weeknight Stir-Fry” bundle that appears in the consideration
+            experiments, shown here at the delivery stage.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="tf-footer">
+    <div class="tf-footer-inner">
+      <span class="tf-footer-brand">Tang Frères Delivery</span>
+      <span class="tf-footer-text">
+        A/B testing prototype 
+      </span>
+    </div>
+  </footer>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2939 @@
+:root {
+    --tf-red: #c40000;
+    --tf-yellow: #f7d633;
+    --tf-dark: #261104;
+    --tf-bg: #fff8ed;
+    --tf-card-bg: #ffffff;
+    --tf-border: #f0e0c5;
+    --tf-radius: 18px;
+    --tf-shadow: 0 16px 35px rgba(0, 0, 0, 0.06);
+    --tf-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+  }
+  
+  /* GLOBAL */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--tf-font);
+    background: var(--tf-bg);
+    color: var(--tf-dark);
+  }
+  
+  /* Simple page wrapper */
+  .page {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  
+  /* HEADER (matching your HTML: .site-header / .logo / .main-nav) */
+  
+  
+  
+  /* VERSION SWITCH */
+  
+  .version-switch {
+    background: #fff2d4;
+    border-bottom: 1px solid #f2ddba;
+  }
+  
+  .version-switch-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.65rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .version-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .version-btn {
+    border-radius: 999px;
+    border: 1px solid transparent;
+    padding: 0.3rem 0.9rem;
+    background: #fff7e4;
+    cursor: pointer;
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: #7b5a3c;
+  }
+  
+  .version-btn.is-active {
+    background: var(--tf-red);
+    color: #ffffff;
+    border-color: var(--tf-red);
+  }
+  
+  .version-label span {
+    font-weight: 600;
+  }
+  
+  /* HERO BACKGROUND WRAPPER */
+  
+  .tf-hero-wrapper {
+    background: #d62828;
+}
+
+.tf-nav-link.is-current {
+    color: #ffffff;
+    font-weight: 600;
+}
+  
+  /* PAGE CONTAINER */
+  
+
+  
+  /* HERO SECTIONS */
+  
+  .hero {
+    border-radius: 28px;
+    padding: 2.5rem 2.25rem;
+    color: #ffffff;
+    box-shadow: var(--tf-shadow);
+    background: linear-gradient(135deg, #ffb42e, #ff6d3b);
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.17);
+  }
+  
+  .hero-content {
+    max-width: 520px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    opacity: 0.9;
+  }
+  
+  .hero h1 {
+    font-size: 2.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .hero-text {
+    font-size: 0.97rem;
+    max-width: 420px;
+  }
+  
+  /* HERO B – extras */
+  
+  .hero-b {
+    margin-top: 0.5rem;
+  }
+  
+  .hero-search-row {
+    display: flex;
+    margin: 1.2rem 0 0.8rem;
+    gap: 0.55rem;
+  }
+  
+  .hero-search-input {
+    flex: 1;
+    border-radius: 999px;
+    padding: 0.7rem 1rem;
+    border: none;
+    font-size: 0.9rem;
+  }
+ 
+  
+  .hero-b {
+    background: linear-gradient(135deg, rgba(255,180,46,0.85), rgba(255,109,59,0.85)),
+                url('images/stirfry.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+
+
+  .hero-search-btn {
+    white-space: nowrap;
+  }
+  
+  .hero-cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+  }
+  
+  .hero-recipes {
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    padding: 0.8rem 1rem;
+    font-size: 0.83rem;
+  }
+  
+  .hero-recipes h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-recipes ul {
+    margin: 0;
+    padding-left: 1.1rem;
+  }
+  
+  /* BUTTONS */
+  
+  .btn {
+    border-radius: 999px;
+    border: none;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-primary {
+    background: var(--tf-red);
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background: #a80000;
+  }
+  
+  .btn-secondary {
+    background: #ffffff;
+    color: var(--tf-red);
+  }
+  
+  .btn-secondary:hover {
+    background: #ffeae5;
+  }
+  
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+  }
+  
+  .btn-ghost:hover {
+    background: rgba(217, 206, 206, 0.08);
+  }
+  
+  .btn-small {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8rem;
+  }
+  
+  /* GENERIC SECTION */
+  
+  .tf-section {
+    margin-top: 2.2rem;
+  }
+  
+  .tf-section-header {
+    margin-bottom: 1.3rem;
+  }
+  
+  .section-step {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.135em;
+    color: #9a7550;
+  }
+  
+  .tf-section-header h2 {
+    margin: 0.1rem 0 0.35rem;
+    font-size: 1.25rem;
+  }
+  
+  .tf-section-header p {
+    margin: 0;
+    max-width: 600px;
+    font-size: 0.9rem;
+    color: #6d533e;
+  }
+  
+  /* PRODUCT GRID */
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+  }
+  
+  .product-card {
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  }
+  
+  .product-card h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+  }
+  
+  .product-note {
+    margin: 0 0 0.45rem;
+    font-size: 0.88rem;
+    color: #7a5b43;
+  }
+  
+  .price {
+    margin: 0 0 0.55rem;
+    font-weight: 600;
+  }
+  
+  /* FLOW STEPS */
+  
+  .flow-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .flow-step {
+    flex: 1;
+    min-width: 180px;
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 0.9rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.03);
+  }
+  
+  .flow-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: var(--tf-yellow);
+    color: var(--tf-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+  
+  .flow-body h3 {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .flow-body p {
+    margin: 0.2rem 0 0;
+    font-size: 0.83rem;
+    color: #755844;
+  }
+  
+  .checkout-note {
+    margin-top: 0.8rem;
+    font-size: 0.86rem;
+    color: #6b4e39;
+  }
+  
+  /* CHECKOUT OPTIONS */
+  
+  .checkout-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+  
+  .checkout-card {
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    padding: 1rem;
+    border: 1px solid var(--tf-border);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+  }
+  
+  .checkout-card h3 {
+    margin: 0 0 0.3rem;
+    font-size: 0.98rem;
+  }
+  
+  .checkout-card p {
+    margin: 0 0 0.65rem;
+    font-size: 0.87rem;
+  }
+  
+  /* DELIVERY */
+  
+  .delivery-card,
+  .loyalty-card {
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    padding: 1rem;
+    border: 1px solid var(--tf-border);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+    font-size: 0.88rem;
+  }
+  
+  .delivery-card-a ul {
+    margin: 0.4rem 0 0;
+    padding-left: 1.1rem;
+  }
+  
+  .delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 0.55rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid #e3cfa9;
+    font-size: 0.88rem;
+    margin-top: 0.35rem;
+  }
+  
+  .delivery-hint {
+    font-size: 0.8rem;
+    color: #7c6048;
+    margin-top: 0.4rem;
+  }
+  
+  /* precise ETA line in Version B */
+  
+  .delivery-eta-example {
+    margin-top: 0.55rem;
+    font-size: 0.86rem;
+  }
+  
+  /* radio rows */
+  
+  .radio-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+  }
+  
+  /* LOYALTY */
+  
+  .loyalty-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 1rem;
+  }
+  
+  .loyalty-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 0.98rem;
+  }
+  
+  .loyalty-card-a {
+    background: #fffef9;
+  }
+  
+  .loyalty-card-email {
+    background: #fff5e6;
+  }
+  
+  .loyalty-card-b {
+    background: #fffef7;
+  }
+  
+  .loyalty-card-ugc {
+    background: #fff2e8;
+  }
+  
+  .ugc-example {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+    color: #714c33;
+  }
+  
+  .tiers-list {
+    margin: 0.1rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.86rem;
+  }
+  
+  /* CONSIDERATION LAYOUT (VERSION B) */
+  
+  .consideration-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .filters-panel,
+  .bundle-panel,
+  .recipe-card {
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    padding: 1rem;
+    border: 1px solid var(--tf-border);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+  }
+  
+  .filter-note {
+    font-size: 0.83rem;
+    color: #785740;
+  }
+  
+  .filter-chips {
+    margin-top: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  
+  .chip {
+    font-size: 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #e3c9a3;
+    background: #fffaf0;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+  }
+  
+  .chip-active {
+    background: var(--tf-red);
+    border-color: var(--tf-red);
+    color: white;
+  }
+  
+  .recipe-card ul {
+    margin: 0.5rem 0 0.4rem;
+    padding-left: 1.1rem;
+    font-size: 0.86rem;
+  }
+  
+  /* VERSION PANELS */
+  
+  .version-panel {
+    display: none;
+  }
+  
+  .version-panel.is-visible {
+    display: block;
+  }
+  
+  /* ======= NEW: Simple filters row in Version A ======= */
+  
+  .simple-search-row {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+  
+  .simple-search-input {
+    flex: 1 1 200px;
+    max-width: 300px;
+    border-radius: 999px;
+    border: 1px solid #e3c9a3;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+    background: #fffdf7;
+  }
+  
+  .simple-chip-row {
+    display: flex;
+    gap: 0.35rem;
+  }
+  
+  .chip-compact {
+    padding: 0.2rem 0.7rem;
+    font-size: 0.78rem;
+  }
+  
+  .simple-search-note {
+    flex-basis: 100%;
+    font-size: 0.8rem;
+    color: #7a5a42;
+  }
+  
+  /* ======= NEW: bundle feedback text ======= */
+  
+  .bundle-feedback {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #166b2c;
+    display: none;
+  }
+  
+  /* ======= NEW: substitution example card ======= */
+  
+  .sub-example {
+    margin-top: 0.75rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 12px;
+    background: #fffdf7;
+    border: 1px dashed var(--tf-border);
+  }
+  
+  .sub-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+  }
+  
+  .sub-message {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #17692b;
+    display: none;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 768px) {
+    .site-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .hero {
+      padding: 1.9rem 1.4rem;
+    }
+  
+    .tf-page {
+      padding-inline: 1rem;
+    }
+  
+    .loyalty-grid,
+    .consideration-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+/* ===================== CUSTOMER JOURNEY BOARD ===================== */
+
+.journey-overview {
+    margin-bottom: 2.5rem;
+  }
+  
+  .journey-header {
+    margin-bottom: 1.25rem;
+  }
+  
+  .journey-header h2 {
+    margin: 0.25rem 0 0.4rem;
+    font-size: 1.35rem;
+  }
+  
+  .journey-header p {
+    max-width: 680px;
+  }
+  
+  /* Tabs */
+  
+  .journey-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .journey-tab {
+    border-radius: 999px;
+    border: 1px solid #e3c9a3;
+    background: #fffaf0;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.82rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #7b5a3c;
+  }
+  
+  .journey-tab.is-active {
+    background: var(--tf-red);
+    border-color: var(--tf-red);
+    color: #ffffff;
+  }
+  
+  /* Cards */
+  
+  .journey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  
+  .journey-card {
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 1rem;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.04);
+    font-size: 0.87rem;
+  }
+  
+  .journey-card-stage {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: #9a7550;
+    margin-bottom: 0.25rem;
+  }
+  
+  .journey-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+  }
+  
+  .journey-card-copy {
+    margin: 0 0 0.45rem;
+    color: #6e523c;
+  }
+  
+  .journey-variants {
+    margin: 0 0 0.6rem;
+    padding-left: 1.1rem;
+  }
+  
+  .journey-variants li {
+    margin-bottom: 0.2rem;
+  }
+  
+  /* KPI badges */
+  
+  .journey-kpis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  
+  .kpi-badge {
+    border-radius: 999px;
+    padding: 0.16rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .kpi-positive {
+    background: #e9f8ea;
+    color: #176c2e;
+  }
+  
+  /* Hide cards when filtered */
+  .journey-card.is-hidden {
+    display: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .journey-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* =========================
+   EXPERIMENT BOARD (experiments.html)
+   ========================== */
+
+.exp-page {
+    padding-top: 2.5rem;
+  }
+  
+  .exp-intro h1 {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+  }
+  
+  .exp-intro p {
+    max-width: 700px;
+    font-size: 0.95rem;
+    color: #6f5642;
+  }
+  
+  .exp-kpi-summary {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  
+  .exp-kpi-chip {
+    background: #fffef8;
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid #f0e0c5;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .kpi-label {
+    color: #7b5a3c;
+  }
+  
+  .kpi-value {
+    font-weight: 700;
+  }
+  
+  .kpi-positive {
+    color: #008a3b;
+  }
+  
+  /* Stage bar (second navigation) */
+  
+  .exp-stage-bar {
+    background: #fff2d4;
+    border-bottom: 1px solid #f2ddba;
+  }
+  
+  .exp-stage-bar-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  .exp-stage-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .exp-stage-pill {
+    text-decoration: none;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #7b5a3c;
+    background: #fff7e4;
+    border: 1px solid transparent;
+  }
+  
+  .exp-stage-pill.is-active,
+  .exp-stage-pill:hover {
+    background: var(--tf-red);
+    color: #ffffff;
+    border-color: var(--tf-red);
+  }
+  
+  /* Stage sections and cards */
+  
+  .exp-stage-section {
+    margin-top: 2.5rem;
+  }
+  
+  .exp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .exp-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 1rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  }
+  
+  .exp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+    border-color: rgba(196, 0, 0, 0.4);
+  }
+  
+  .exp-card-stage {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #9a7550;
+    margin-bottom: 0.25rem;
+  }
+  
+  .exp-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1rem;
+  }
+  
+  .exp-card p {
+    margin: 0 0 0.7rem;
+    font-size: 0.9rem;
+    color: #6f5541;
+  }
+  
+  .exp-variants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .variant-pill {
+    font-size: 0.78rem;
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    background: #fffaf0;
+    border: 1px solid #e3c9a3;
+    color: #7b5a3c;
+  }
+  
+  .variant-b {
+    background: rgba(196, 0, 0, 0.08);
+    border-color: rgba(196, 0, 0, 0.45);
+    color: #8a0000;
+  }
+  
+  .exp-kpi-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  
+  .kpi-pill {
+    font-size: 0.8rem;
+    border-radius: 999px;
+    padding: 0.22rem 0.6rem;
+    background: #f2fff6;
+    border: 1px solid #c6e9d3;
+    color: #146c35;
+  }
+  
+  .kpi-note {
+    font-size: 0.78rem;
+    color: #8b6f58;
+  }
+  
+  /* Active nav link */
+  
+  .tf-nav-link-active {
+    color: var(--tf-red);
+  }
+  
+  
+  /* Responsive tweaks */
+  
+  @media (max-width: 768px) {
+    .exp-kpi-summary {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .exp-stage-steps {
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  /* ===== JOURNEY / STAGE STRIP ===== */
+
+.journey-header {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem 0.9rem;
+  }
+  
+  .stage-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .stage-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  
+  .stage-tab {
+    border-radius: 999px;
+    border: 1px solid #d9c3a4;
+    background: #fff7e4;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #7b5a3c;
+  }
+  
+  .stage-tab.is-active {
+    background: var(--tf-red);
+    border-color: var(--tf-red);
+    color: #ffffff;
+  }
+  
+  .stage-strip-label {
+    font-size: 0.8rem;
+    color: #7c6048;
+  }
+  
+  /* ===== EXPERIMENT CARDS OVERVIEW ===== */
+  
+  .experiments-section {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+  }
+  
+  .stage-group {
+    margin-top: 1.5rem;
+  }
+  
+  .stage-group-title {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #9a7550;
+    margin-bottom: 0.25rem;
+  }
+  
+  .stage-group-subtitle {
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+    color: #6d533e;
+  }
+  
+  .experiment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+  }
+  
+  .experiment-card {
+    background: #ffffff;
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 0.85rem 1rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.12s ease,
+      border-color 0.12s ease;
+  }
+  
+  .experiment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.05);
+    border-color: #f1c48a;
+  }
+  
+  .exp-meta {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #a27d59;
+    margin-bottom: 0.2rem;
+  }
+  
+  .exp-title {
+    margin: 0 0 0.3rem;
+    font-size: 0.96rem;
+  }
+  
+  .experiment-card p {
+    margin: 0 0 0.25rem;
+  }
+  
+  .exp-variants {
+    margin-top: 0.2rem;
+  }
+  
+  .exp-kpi {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0d6b3f;
+  }
+  
+  /* Responsive tweak for small screens */
+  @media (max-width: 768px) {
+    .journey-header {
+      padding-inline: 1rem;
+    }
+  
+    .experiments-section {
+      padding-inline: 1rem;
+    }
+  }
+
+
+
+
+/* CUSTOMER JOURNEY STAGE BAR (under the header) */
+.journey-stage-bar {
+    background: #fff5f0;              /* very light warm off-white instead of beige */
+    border-bottom: 1px solid #f0d0c8; /* thin line to separate it from the red below */
+  }
+  
+  
+  .journey-stage-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .journey-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #805140;
+    margin-right: auto;    /* keeps pills pushed to the right */
+  }
+  
+  
+  .journey-stage-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  
+  .journey-tab {
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font-size: 0.83rem;
+    text-decoration: none;
+    color: #7b5a3c;
+    background: #fffaf0;
+  }
+  
+  .journey-tab:hover {
+    border-color: #e6c89f;
+  }
+  
+  .journey-tab.is-active {
+    background: var(--tf-red);
+    color: #ffffff;
+    border-color: var(--tf-red);
+  }
+  
+  /* EXPERIMENT SUMMARY CARDS */
+  .experiment-summary {
+    background: #fff8ed;
+    border-bottom: 1px solid #f2ddba;
+  }
+  
+  .experiment-summary-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.6rem 1.5rem 1.2rem;
+  }
+  
+  .experiment-summary-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.4rem;
+  }
+  
+  .experiment-summary-sub {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+    color: #6f5240;
+  }
+  
+  .experiment-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+  }
+  
+  .experiment-card {
+    display: block;
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 0.85rem 0.95rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.03);
+    color: inherit;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+  }
+  
+  .experiment-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.06);
+  }
+  
+  .experiment-card-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .experiment-card-body {
+    font-size: 0.83rem;
+    color: #715540;
+  }
+  
+  .experiment-kpis {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  
+  .kpi-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: #f5efe4;
+    color: #634832;
+    font-weight: 500;
+  }
+  
+  .kpi-positive {
+    background: #e9f8e5;
+    color: #1f6c31;
+  }
+  
+  .kpi-neutral {
+    background: #e9f2ff;
+    color: #214f99;
+  }
+  
+  /* Example substitution box inside delivery B */
+  .example-subs-box {
+    margin-top: 0.7rem;
+    background: #fff9f5;
+  }
+  
+  .subs-actions {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  
+  /* small tweak for current nav link */
+  .tf-nav-link.is-current {
+    color: var(--tf-red);
+    font-weight: 600;
+  }
+  
+
+
+
+
+ /* ================== CUSTOMER JOURNEY OVERVIEW (experiments.html) ================== */
+
+.tf-page-experiments {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem 4rem;
+  }
+ 
+/* Home page – same padding and width as experiments page */
+  .tf-page-home {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem 4rem;
+  }
+    
+  .tf-page-checkout {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem 4rem;
+  }
+    
+  .tf-page-delivery {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem 4rem;
+  }
+      
+
+  /* top bar with stage buttons */
+  .journey-stage-bar {
+    background: #fff4dc;
+    border-bottom: 1px solid #f2ddba;
+  }
+  
+  .journey-stage-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  
+  .journey-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7b5a3c;
+  }
+  
+  .stage-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .stage-pill {
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid #f0d4aa;
+    background: #fffaf0;
+    color: #7b5a3c;
+    font-weight: 500;
+  }
+  
+  .stage-pill:hover {
+    border-color: var(--tf-red);
+    color: var(--tf-red);
+  }
+  
+  /* stage sections */
+  .experiment-stage {
+    margin-top: 2.2rem;
+  }
+  
+  .experiment-stage-header {
+    margin-bottom: 1rem;
+  }
+  
+  .experiment-stage-header h2 {
+    margin: 0.1rem 0 0.3rem;
+  }
+  
+  .experiment-stage-header p {
+    margin: 0;
+    max-width: 640px;
+    font-size: 0.9rem;
+    color: #6d533e;
+  }
+  
+  .stage-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: #9a7550;
+  }
+  
+  /* experiment cards row */
+  .experiment-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* card styling – uses same feeling as other cards */
+  .experiment-card {
+    flex: 1;
+    min-width: 260px;
+    background: var(--tf-card-bg);
+    border-radius: var(--tf-radius);
+    border: 1px solid var(--tf-border);
+    padding: 0.9rem 1rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+                border-color 0.12s ease-out;
+  }
+  
+  .experiment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.06);
+    border-color: rgba(196, 0, 0, 0.6);
+  }
+  
+  .experiment-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #b0783e;
+    margin-bottom: 0.25rem;
+  }
+  
+  .experiment-card h3 {
+    margin: 0 0 0.4rem;
+    font-size: 0.98rem;
+  }
+  
+  .experiment-desc {
+    margin: 0 0 0.65rem;
+    font-size: 0.86rem;
+    color: #6f523e;
+  }
+  
+  /* KPI pills */
+  .kpi-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  
+  .kpi-pill {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: #fff7e4;
+    border: 1px solid #f0d4aa;
+    white-space: nowrap;
+  }
+  
+  .kpi-positive {
+    background: #e3f8d9;
+    border-color: #b9e99c;
+    color: #2b7a0b;
+  }
+  
+  .kpi-neutral {
+    background: #e8f1ff;
+    border-color: #c3d7ff;
+    color: #28539b;
+  }
+  
+  /* mobile tweaks */
+  @media (max-width: 768px) {
+    .journey-stage-inner {
+      align-items: flex-start;
+    }
+  
+    .experiment-strip {
+      flex-direction: column;
+    }
+  }
+
+  
+/* ===== EXPERIMENTS PAGE – CLEANUP & CONSISTENCY ===== */
+
+/* Stage titles (Stage 1 · Awareness, Stage 2 · Consideration, etc.) */
+.stage-group-title {
+    font-size: 0.8rem;              /* same size for Stage 1 and Stage 2 */
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    color: #ffe4b8;
+    margin: 0 0 0.25rem;
+  }
+  
+  /* Stage subtitle line
+     ("How people discover Tang Frères Delivery and understand the value quickly."
+      and "Help users explore the catalogue.") */
+  .stage-group-subtitle {
+    font-size: 1.1rem;              /* same style as “Help users explore the catalogue.” */
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 1.25rem;
+  }
+  
+  /* Experiment cards – titles and layout */
+  .experiment-card {
+    background: #fffdf8;
+    border-radius: 18px;
+    border: 1px solid #f0e0c5;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.03);
+  }
+  
+  /* Small orange label at the top of each card
+     (AWARENESS · HOMEPAGE HERO, AWARENESS · SOCIAL ADS, SEARCH & FILTERS, etc.) */
+  .experiment-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 600;
+    color: #b58a54;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Main experiment titles inside the cards
+     → gives same font/size to:
+        - Landing page: generic vs. “Plan your stir-fry in 3 clicks”
+        - Social creative: static image vs. 15-second recipe video
+        - Filter prominence for pantry items
+        - Recipe page vs. one-click “Weeknight Stir-Fry” bundle, etc. */
+  .experiment-card h3 {
+    font-size: 1rem;                /* same for all experiment titles */
+    font-weight: 700;
+    line-height: 1.35;              /* prevents letters from overlapping */
+    margin: 0 0 0.4rem;
+  }
+  
+  /* Optional: keep body text clean and readable */
+  .experiment-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* KPI pills (the green badges) – ensures they don’t overlap text */
+  .exp-kpi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+  }
+  
+  .kpi-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+.tf-header {
+    background: #ffffff;
+    border-bottom: 1px solid #f0e0c5;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .tf-header-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+ /* Brand area in the header */
+.tf-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  
+  /* Logo size */
+  .tf-logo {
+    width: 60px;     /* was ~46px – a bit bigger */
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  /* Brand name bigger */
+  .tf-brand-name {
+    font-weight: 700;
+    font-size: 1.25rem;   /* bigger than before */
+  }
+  
+  /* Tagline slightly bigger too */
+  .tf-brand-tagline {
+    font-size: 0.95rem;   /* was ~0.8–0.85 */
+    color: #7a5940;
+  }
+  
+  /* Header inner layout – keep content closer to left edge */
+  .tf-header-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.9rem 1.5rem;  /* same left padding as content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+/* Force readable brand text in the header */
+.tf-header .tf-brand-name,
+.tf-header .tf-brand-tagline {
+  color: #261104;   /* or #5a4331 if you prefer slightly softer brown */
+}
+
+
+
+  .tf-nav {
+    display: flex;
+    gap: 1.4rem;
+  }
+  
+  .tf-nav-link {
+    text-decoration: none;
+    color: #6c4f33;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .tf-nav-link:hover {
+    color: #c40000;
+  }
+  
+  .tf-nav-link--current {
+    color: #c40000;
+    font-weight: 700;
+  }
+  
+
+
+ /* Delivery page hero */
+.delivery-hero {
+    width: 100%;
+    background: #f8f1e7;
+    padding: 20px 0 10px;
+    text-align: center;
+}
+
+.delivery-hero-img {
+    width: 600px;
+    max-width: 90%;
+    border-radius: 16px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Experiment cards (reuse from experiments page) */
+.experiment-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.experiment-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #eee3d6;
+}
+
+.card-meta {
+    font-size: 13px;
+    font-weight: bold;
+    color: #8b6f4f;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.kpi-pill-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.kpi-pill {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.kpi-positive { background: #def5d7; color: #216b1b; }
+.kpi-negative { background: #ffe3dd; color: #b23a2a; }
+
+/* Section headers */
+.stage-section {
+    margin-top: 50px;
+}
+
+.stage-title {
+    font-size: 15px;
+    color: #8b6f4f;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Detail cards */
+.detail-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.detail-card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #eee3d6;
+}
+ 
+
+
+.tf-gradient-bg {
+    background: #fff3f2;   /* very light red tint */
+    min-height: 100vh;
+    padding-bottom: 4rem;
+  }
+  
+
+
+
+
+
+
+
+
+  /* =========================================================
+   GLOBAL TANG FRÈRES RED BACKGROUND (all pages)
+   ======================================================= */
+
+/* Red background for the whole site */
+body {
+    background: #c62828;
+  }
+  
+  /* Let the page container be transparent so red shows through */
+ /* === GLOBAL RED THEME FOR CONTENT AREA === */
+/* All main pages share the same red backdrop. */
+/* ===== GLOBAL RED THEME (ALL PAGES USE TANG FRÈRES RED) ===== */
+
+/* Page background: Tang Frères red */
+.tf-page {
+  background: #c62828;
+}
+
+/* Default text on the red background (outside of cards) */
+.tf-page,
+.tf-page .tf-section-header h2,
+.tf-page .tf-section-header p,
+.tf-page .overview-label,
+.tf-page .overview-title,
+.tf-page .stage-title {
+  color: #fff;
+}
+
+/* Stage labels like "STAGE 1 · AWARENESS" */
+.section-step {
+  color: #ffeecd;
+}
+
+/* Eyebrow labels ("OVERVIEW", small uppercase labels, etc.) */
+.eyebrow {
+  color: #ffeecd;
+}
+
+/* KPI pills (green tags) stay readable */
+.kpi-pill {
+  background: #e3f4cd;
+  color: #3f7e1a;
+}
+
+/* Card backgrounds + text go back to dark on white */
+.experiment-card,
+.checkout-card,
+.delivery-card,
+.loyalty-card {
+  background: #ffffff;
+  color: #2b1b14;
+}
+
+/* Make sure headings and body text inside cards are dark as well */
+.experiment-card h3,
+.experiment-card p,
+.experiment-card li,
+.experiment-card strong,
+.checkout-card h3,
+.checkout-card p,
+.delivery-card h3,
+.delivery-card p,
+.loyalty-card h3,
+.loyalty-card p {
+  color: #2b1b14;
+}
+
+/* ===== Tang Frères red theme readability fixes ===== */
+
+/* Stage labels (STAGE 1 · AWARENESS, STAGE 4 · DELIVERY & USE, etc.) */
+.stage-label,
+.section-step {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #ffe4b8;            /* light warm yellow for contrast on red */
+}
+
+/* Big stage headings (e.g. "How people discover..." / "Help users explore...") */
+.stage-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0.2rem 0 1rem;
+  color: #ffffff;            /* white on the red background */
+}
+
+/* Generic section headings on red pages */
+.tf-section-header h2 {
+  color: #ffffff;
+}
+
+/* Keep text inside white cards dark so it stays readable */
+.experiment-card,
+.checkout-card,
+.delivery-card,
+.loyalty-card {
+  background: #ffffff;
+  color: #333333;
+}
+
+/* Text *inside* the white cards */
+.experiment-card h3,
+.experiment-card p,
+.experiment-card li,
+.checkout-card h3,
+.checkout-card p,
+.delivery-card h3,
+.delivery-card p,
+.loyalty-card h3,
+.loyalty-card p {
+  color: #333333;
+}
+
+/* KPI pills stay readable on red */
+.kpi-pill {
+  background: #ffe7b5;
+  color: #5b4a00;
+}
+
+
+  
+  /* But keep paragraph text inside white content boxes dark */
+  .experiment-card p,
+  .checkout-card p,
+  .flow-step p,
+  .tf-section p {
+    color: #333 !important;
+  }
+  
+/* Overview label on red background */
+.overview-label,
+.eyebrow-overview {
+    color: #ffebc8 !important;   /* light beige */
+    opacity: 0.95;
+}
+
+/* Overview description on red background */
+.overview-description {
+    color: #ffebc8 !important;  /* same light beige as other text on red */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+/* ==== EXPERIMENTS PAGE – TEXT ON RED BACKGROUND ==== */
+
+/* Overview label + description on red */
+.page-experiments .overview-label,
+.page-experiments .overview-description {
+  color: #ffebc8 !important;   /* light beige */
+}
+
+/* Optional: make description a bit softer & readable */
+.page-experiments .overview-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 640px;
+}
+
+/* === Experiments page – text on red background === */
+
+/* Light beige label "Overview" and other small labels on red */
+.tf-page-experiments .tf-section-header .section-step {
+    color: #ffe8c2 !important;
+  }
+  
+  /* Light beige intro paragraph under the main title */
+  .tf-page-experiments .overview-description {
+    color: #ffe8c2 !important;
+  }
+  
+
+ /* Experiments page – same padding as other pages */
+.tf-page-experiments {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem 4rem;
+  }
+
+ /* === Paragraph colours on red background (checkout + delivery) === */
+
+/* On checkout & delivery pages, all <p> on the red background become light beige */
+
+
+/* But keep text inside white cards DARK so it's readable */
+
+/* ===== Compact footer ===== */
+.tf-footer {
+    background: #8b0000;            /* deep Tang red */
+    margin-top: 2rem;
+  }
+  
+  .tf-footer-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #ffebc8;
+  }
+  
+  .tf-footer-brand {
+    font-weight: 600;
+  }
+  
+  .tf-footer-text {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .tf-footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+
+
+ /* FORCE all text inside white cards to stay dark */
+.experiment-card p,
+.experiment-card h3,
+.experiment-card li,
+.checkout-card p,
+.checkout-card h3,
+.checkout-card li,
+.delivery-card p,
+.delivery-card h3,
+.delivery-card li,
+.loyalty-card p,
+.loyalty-card h3,
+.loyalty-card li {
+    color: #2b1b14 !important;  /* dark text */
+}
+
+/* === Checkout page: section header on red background === */
+.tf-page-checkout .tf-section-header h2,
+.tf-page-checkout .tf-section-header p,
+.tf-page-checkout .tf-section-header .section-step {
+  color: #ffffff !important;   /* white, readable on red */
+}
+
+
+/* === Delivery page: section header on red background === */
+.tf-page-delivery .tf-section-header h2,
+.tf-page-delivery .tf-section-header p,
+.tf-page-delivery .tf-section-header .section-step {
+  color: #ffffff !important;
+}
+
+
+
+
+/* ===== HOME PAGE – TEXT ON RED BACKGROUND ===== */
+
+/* Make all the small intro text on the red background white */
+.page-home .tf-page-home .tf-section-header .section-step,
+.page-home .tf-page-home .tf-section-header h1,
+.page-home .tf-page-home .tf-section-header h2,
+.page-home .tf-page-home .tf-section-header p {
+  color: #ffffff !important;
+}
+
+/* Stage labels / helper text near the top if they exist */
+.page-home .stage-strip-label,
+.page-home .stage-title {
+  color: #ffe8c2 !important;
+}
+
+/* Keep text inside white home experiment cards dark */
+.page-home .home-experiment-card,
+.page-home .home-experiment-card h3,
+.page-home .home-experiment-card p {
+  color: #2b1b14 !important;
+}
+
+/* ===== HOME HERO LAYOUT ===== */
+
+.home-hero-experiment {
+  margin-top: 1.5rem;
+}
+
+.home-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.3fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.home-hero-image img {
+  width: 100%;
+  border-radius: 22px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.home-hero-details {
+  max-width: 480px;
+}
+
+.home-tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #ffe8c2;
+  margin-bottom: 0.25rem;
+}
+
+.home-product-name {
+  margin: 0 0 0.3rem;
+  font-size: 1.6rem;
+}
+
+.home-product-desc {
+  margin: 0 0 0.8rem;
+  font-size: 0.95rem;
+  color: #ffe8c2;
+}
+
+.home-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.home-price-old {
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.home-price-new {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.home-price-badge {
+  font-size: 0.8rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #ffe7b5;
+  color: #5a3b00;
+}
+
+.home-cta-lg {
+  margin-top: 0.5rem;
+  padding-inline: 1.6rem;
+}
+
+.home-eta-note {
+  margin-top: 0.5rem;
+  font-size: 0.86rem;
+  color: #ffe8c2;
+}
+
+.home-kpi-row {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* ===== HOME EXPERIMENT CARDS (under hero) ===== */
+
+.home-variant-section {
+  margin-top: 2.5rem;
+}
+
+.home-variants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.home-experiment-card {
+  background: #fffdf8;
+  border-radius: 18px;
+  border: 1px solid #f0e0c5;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.home-exp-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #b58a54;
+  margin-bottom: 0.3rem;
+}
+
+.home-variant-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.home-variant-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.home-variant-tag.variant-b {
+  color: #8a0000;
+}
+
+.home-variant-thumb {
+  border-radius: 12px;
+  background: #f5eee5;
+  height: 80px;
+  margin-bottom: 0.4rem;
+}
+
+/* Placeholder backgrounds for the thumbnails (you can overwrite these with real images) */
+.home-variant-thumb.small-packshot {
+  background-image: url('stirfry2.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-variant-thumb.large-hero {
+  background-image: url('stirfry2.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-price-row-inline {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin: 0.4rem 0;
+}
+
+.home-cta-sm {
+  margin-top: 0.3rem;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .home-hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-image img {
+    max-height: 260px;
+  }
+}
+
+
+/* ===== HOME PAGE REAL-SHOP STYLES ===== */
+
+.home-title {
+    font-size: 1.7rem;
+    margin: 0 0 0.6rem;
+    color: #ffffff;
+  }
+  
+  .home-intro {
+    max-width: 640px;
+    font-size: 0.98rem;
+    color: #ffe9cc;
+  }
+  
+  /* Hero section headings on home */
+  .home-hero-heading {
+    font-size: 1.35rem;
+    margin: 0 0 0.3rem;
+    color: #ffffff;
+  }
+  
+  .home-hero-sub {
+    max-width: 620px;
+    font-size: 0.95rem;
+    color: #ffe6c5;
+  }
+  
+  /* Categories row */
+  .home-section-heading {
+    color: #ffffff;
+  }
+  
+  .home-category-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .home-category-chip {
+    border-radius: 999px;
+    border: none;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.82rem;
+    cursor: pointer;
+    background: #fffaf0;
+    color: #7b5a3c;
+    font-weight: 500;
+  }
+  
+  .home-category-chip--outline {
+    background: transparent;
+    border: 1px solid #ffe0bf;
+    color: #ffe9cc;
+  }
+  
+  /* Product strip */
+  .home-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+  }
+  
+  .home-product-card {
+    background: #fffdf8;
+    border-radius: 18px;
+    border: 1px solid #f0e0c5;
+    padding: 0.9rem;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.03);
+  }
+  
+  .home-product-img {
+    width: 100%;
+    height: 120px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0.6rem;
+  }
+  
+  /* Dummy backgrounds – you can replace with real images later */
+  .home-product-img--1 { background-image: url("images/home-packshot-placeholder.jpg"); }
+  .home-product-img--2 { background-image: url("images/home-hero-product-placeholder.jpg"); }
+  .home-product-img--3 { background-image: url("images/home-packshot-placeholder.jpg"); }
+  
+  .home-product-title {
+    margin: 0 0 0.2rem;
+    font-size: 0.96rem;
+  }
+  
+  .home-product-meta {
+    margin: 0 0 0.4rem;
+    font-size: 0.82rem;
+    color: #7a5a45;
+  }
+  
+  .home-product-price-row {
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-product-price {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .home-product-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Keep hero layout responsive */
+  .home-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .home-hero-image img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+  }
+  
+  .home-tag {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.7rem;
+    color: #ffd9a5;
+  }
+  
+  @media (max-width: 768px) {
+    .home-hero-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .home-category-row {
+      gap: 0.4rem;
+    }
+  }
+
+  
+  /* FIX PRODUCT TITLES */
+.home-product-title {
+    color: #2b1b14 !important;   /* strong dark text */
+    opacity: 1 !important;       /* remove any fading */
+}
+
+/* FIX PRODUCT META TEXT */
+.home-product-meta {
+    color: #5a4638 !important;
+    opacity: 1 !important;
+}
+
+/* FIX PRODUCT PRICE TEXT */
+.home-product-price {
+    color: #2b1b14 !important;
+    font-weight: 600;
+}
+
+
+.home-product-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+
+/* ===========================
+   HOME INTRO – more premium
+   =========================== */
+   .page-home .home-intro {
+    max-width: 1120px;
+    margin: 1.75rem auto 2.2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .page-home .home-intro-header {
+    max-width: 720px;
+  }
+  
+  .page-home .home-intro-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    margin: 0 0 0.5rem;
+    color: #ffe8c2;
+  }
+  
+  .page-home .home-intro-title {
+    margin: 0 0 0.8rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  
+  .page-home .home-intro-text,
+  .page-home .home-intro-subtitle {
+    margin: 0 0 0.55rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: #ffe8c2;
+  }
+  
+  /* ===========================
+     HOME – product row
+     =========================== */
+  
+  .page-home .home-products {
+    max-width: 1120px;
+    margin: 2.8rem auto 2.2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .page-home .home-products-header h2 {
+    margin: 0 0 1.3rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+  
+  .page-home .home-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.4rem;
+  }
+  
+  /* Product card */
+  .page-home .home-product-card {
+    background: #fffdf8;
+    border-radius: 24px;
+    padding: 1rem 1.1rem 1.3rem;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  
+  /* hover animation */
+  .page-home .home-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* image area – not too tall */
+  .page-home .home-product-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;         /* controls top height */
+    border-radius: 18px;
+    background: #f7f2ea;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+  }
+  
+  .page-home .home-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  
+  /* slight zoom on hover */
+  .page-home .home-product-card:hover .home-product-img img {
+    transform: scale(1.04);
+  }
+  
+  /* badges */
+  .page-home .home-product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 0.18rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    background: #fff8e0;
+    color: #7a4a24;
+  }
+  
+  .page-home .badge-popular {
+    background: #ffe7b5;
+    color: #7a4a10;
+  }
+  
+  .page-home .badge-new {
+    background: #e5f3ff;
+    color: #184f8c;
+  }
+  
+  .page-home .badge-limited {
+    background: #ffe0e0;
+    color: #8b1010;
+  }
+  
+  /* text + price inside card */
+  .page-home .home-product-title {
+    margin: 0 0 0.25rem;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #24130b;
+  }
+  
+  .page-home .home-product-meta {
+    margin: 0 0 0.35rem;
+    font-size: 0.84rem;
+    color: #7a5a43;
+  }
+  
+  .page-home .home-product-price-row {
+    margin: 0 0 0.6rem;
+  }
+  
+  .page-home .home-product-price {
+    font-weight: 700;
+    font-size: 0.94rem;
+    color: #24130b;
+  }
+  
+  /* quantity selector */
+  .page-home .home-product-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    background: #fff7e8;
+    margin-bottom: 0.8rem;
+    width: fit-content;
+  }
+  
+  .page-home .qty-btn {
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0 0.2rem;
+    cursor: pointer;
+    color: #b25524;
+  }
+  
+  .page-home .qty-value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a2d1c;
+  }
+  
+  /* red Add to basket button */
+  .page-home .home-product-btn {
+    margin-top: auto;
+    width: 100%;
+    border-radius: 999px;
+    background: var(--tf-red);
+    color: #ffffff;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.55rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.16s ease, transform 0.08s ease;
+  }
+  
+  .page-home .home-product-btn:hover {
+    background: #a80000;
+    transform: translateY(-1px);
+  }
+ 
+  .home-price-old {
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-right: 0.4rem;
+  }
+  
+  .home-price-new {
+    font-weight: 700;
+  }
+  
+
+ /* Homepage intro + hero copy on red background */
+.page-home .home-title,
+.page-home .home-intro,
+.page-home .home-hero-heading,
+.page-home .home-hero-sub {
+  color: #ffffff;
+}
+ 
+.home-product-img {
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  
+  /* price row */
+  .home-product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* crossed-out old price */
+  .home-product-price-old {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 0.9rem;
+  }
+  
+  /* new price */
+  .home-product-price-new {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  /* red button with white text */
+  .home-product-btn {
+    margin-top: 0.6rem;
+    width: 100%;
+    background: #c40000;
+    color: #ffffff;
+  }
+  .home-product-btn:hover {
+    background: #a00000;
+  }
+  
+
+ /* Make all text inside white product cards dark again */
+.home-product-card,
+.home-product-card h3,
+.home-product-card p,
+.home-product-card span {
+  color: #2b1b14 !important;
+}
+
+/* Strikethrough style for old price */
+.home-product-price-old {
+  text-decoration: line-through;
+  opacity: 0.55;
+  margin-right: 0.35rem;
+}
+
+/* New price a bit bolder */
+.home-product-price-new {
+  font-weight: 700;
+}
+
+.home-product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+  }
+  
+  .qty-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 12px;
+  }
+  
+  .qty-btn {
+    background: #f8e8d2;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .qty-number {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+  }
+    
+
+/* price row inside product card */
+.home-product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+  }
+  
+  /* old price crossed out */
+  .home-product-price-old {
+    font-size: 0.9rem;
+    color: #a78f86;
+    text-decoration: line-through;
+  }
+  
+  /* new price stronger */
+  .home-product-price-new {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2b1b14;
+  }
+  
+  /* footer: qty + button on one line */
+  .home-product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+  }
+  
+  /* quantity pill */
+  .home-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.55rem;
+    border-radius: 999px;
+    background: #fff3e0;
+    font-size: 0.85rem;
+  }
+  
+  .home-qty-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* red add-to-basket button inside card */
+  .home-product-btn {
+    flex: 1;
+    border-radius: 999px;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #c40000;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .home-product-btn:hover {
+    background: #a00000;
+  }
+
+  .home-product-card .qty-row {
+    margin-bottom: 0.75rem; /* Adds space before the button */
+  }
+   
+
+/* container for qty row + button */
+.home-product-bottom {
+    margin-top: 0.75rem;      /* space above the whole block */
+    display: flex;
+    flex-direction: column;   /* stack qty row and button */
+    gap: 0.5rem;              /* space *between* qty and button */
+  }
+  
+  /* make sure the button itself isn't glued to the container edge */
+  .home-product-btn {
+    margin-top: 0;            /* so gap controls the spacing */
+  }
+ 
+  
+
+
+
+ /* FIX QUANTITY SELECTOR SIZE */
+.home-product-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem; /* spacing between qty & button */
+    margin-top: 0.6rem;
+  }
+  
+  .home-qty {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8e8d0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    width: auto;        /* <-- fixes the long stretching */
+    margin: 0 auto;     /* center it */
+  }
+  
+  .home-qty-btn {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 0 6px;
+    cursor: pointer;
+  }
+  
+  .home-qty-value {
+    padding: 0 6px;
+    font-weight: 600;
+  }
+   
+
+
+
+ /* Container: quantity left, button right */
+.home-product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.3rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Quantity group */
+  .home-qty {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5e8d2;
+    padding: 6px 10px;
+    border-radius: 20px;
+  }
+  
+  /* Qty buttons */
+  .home-qty-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 6px;
+  }
+  
+  /* Add to basket button */
+  .home-product-btn {
+    flex-shrink: 0;
+    background: #c60000;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+   
+
+  .page-home .home-intro-header * {
+    color: #ffffff;
+  }
+   
+
+/* === HOMEPAGE: force copy on red background to be white === */
+
+/* Top intro block */
+.page-home .home-intro-header h1,
+.page-home .home-intro-header p,
+.page-home .home-intro-header .home-intro-eyebrow {
+  color: #ffffff !important;
+}
+
+/* Hero headings + paragraph under “Tonight’s featured stir-fry bundle” */
+.page-home .home-hero-experiment > .tf-section-header h2,
+.page-home .home-hero-experiment > .tf-section-header p {
+  color: #ffffff !important;
+}
+
+/* Any other paragraphs/headings on red that are NOT inside white cards */
+.page-home .tf-section:not(.home-products):not(.home-variant-section)
+  > *:not(.home-products-grid):not(.home-variants-grid) p,
+.page-home .tf-section:not(.home-products):not(.home-variant-section)
+  > *:not(.home-products-grid):not(.home-variants-grid) h1,
+.page-home .tf-section:not(.home-products):not(.home-variant-section)
+  > *:not(.home-products-grid):not(.home-variants-grid) h2,
+.page-home .tf-section:not(.home-products):not(.home-variant-section)
+  > *:not(.home-products-grid):not(.home-variants-grid) h3 {
+  color: #ffffff !important;
+}
+
+/* Keep text inside white cards dark (products + experiment cards) */
+.home-product-card,
+.home-product-card * ,
+.home-experiment-card,
+.home-experiment-card * {
+  color: #2b1b14 !important;
+}
+
+
+/* === HOMEPAGE VERSION A – smaller, simpler hero === */
+
+/* Target the Version A hero panel on the home page */
+.page-home section[data-version="A"].home-hero-experiment .home-hero-layout {
+    align-items: flex-start;
+  }
+  
+  /* Smaller image than Version B */
+  .page-home section[data-version="A"].home-hero-experiment .home-hero-image img {
+    max-width: 380px;          /* smaller */
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Slightly smaller heading + narrower text */
+  .page-home section[data-version="A"].home-hero-experiment .home-product-name {
+    font-size: 1.4rem;
+  }
+  
+  .page-home section[data-version="A"].home-hero-experiment .home-product-desc {
+    max-width: 380px;
+    color: #ffe9cc;            /* softer than bright white */
+  }
+  
+  /* Make Version A button a bit less “loud” than B */
+  .page-home section[data-version="A"].home-hero-experiment .home-cta-lg {
+    background: #ffffff;
+    color: #c40000;
+  }
+  
+  /* === HOMEPAGE VERSION B – keep strong hero image === */
+  .page-home section[data-version="B"].home-hero-experiment .home-hero-image img {
+    max-width: 540px;          /* bigger & more impressive */
+  }
+  
+
+
+ /* ===========================================
+   WHITE TEXT ON RED BACKGROUND (HOME ONLY)
+=========================================== */
+
+.page-home .home-intro-header *,
+.page-home .home-hero-experiment > .tf-section-header * {
+  color: #ffffff !important;
+}
+
+/* ===========================================
+   VERSION A / VERSION B SWITCHING
+=========================================== */
+
+/* Version A = body[data-version="A"] */
+body[data-version="A"] .home-hero-image img {
+  max-width: 360px !important;
+  opacity: 0.85;
+}
+
+body[data-version="A"] .home-product-name {
+  font-size: 1.3rem !important;
+}
+
+body[data-version="A"] .home-cta-lg {
+  background: #ffffff !important;
+  color: #c40000 !important;
+  border: 2px solid #c40000 !important;
+}
+
+/* Version B = strong hero */
+body[data-version="B"] .home-hero-image img {
+  max-width: 540px !important;
+}
+
+body[data-version="B"] .home-cta-lg {
+  background: #d10000 !important;
+  color: #fff !important;
+}
+ 
+
+.page-home .home-intro-header,
+.page-home .home-intro-header p,
+.page-home .home-intro-title,
+.page-home .home-hero-heading,
+.page-home .home-hero-sub {
+  color: #ffffff;
+}
